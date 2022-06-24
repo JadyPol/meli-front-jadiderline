@@ -1,0 +1,16 @@
+
+.breadcrumbs-cont-ext {
+  .breadcrumbs-items{
+    a.item-breadcrumb,
+    span.item-breadcrumbs-separator {
+      font-size: var(--f-14);
+      color: var(--gray-2);
+    }
+    a.item-breadcrumb {
+      text-decoration: none;
+    }
+    span.item-breadcrumbs-separator {
+      padding: 0 10px;
+    }
+  }
+}

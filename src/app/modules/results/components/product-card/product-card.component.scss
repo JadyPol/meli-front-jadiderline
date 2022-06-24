@@ -1,0 +1,100 @@
+@import '../../../../../styles/base/mixins';
+@import '../../../../../styles/base/breakpoints';
+
+.product-card-cont-ext {
+  padding: 16px 92px 16px 0;
+  @include flex($align_items: flex-start);
+  border-bottom: 1px solid var(--gray-3);
+  cursor: pointer;
+  .product-image-cont {
+    .image-href {
+      @include flex($align_items: center);
+      width: 160px;
+      height: 160px;
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+      }
+    }
+  }
+  .product-info-cont {
+    margin-left: 16px;
+    @include flex($align_items: flex-start, $justify_content: space-between);
+    width: 100%;
+    margin-top: 24px;
+    .product-space-info {
+      width: calc(100% - 410px);
+      .price-cont {
+        margin-bottom: 32px;
+        @include flex($align_items: self-end);
+        span {
+          font-size: var(--f-24);
+          color: var(--gray-1);
+          font-weight: 400;
+          font-family: var(--price_font);
+          letter-spacing: 1px;
+        }
+        .shipping-icon {
+          background-image: url('../../../../../assets/images/ic_shipping.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 20px;
+          height: 20px;
+          margin-left: 10px;
+        }
+      }
+      .product-href {
+        text-decoration: none;
+        .product-into-detail {
+          h2 {
+            font-size: var(--f-18);
+            color: var(--gray-1);
+            font-weight: 100;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .location-cont {
+      span {
+        font-size: var(--f-12);
+        color: var(--gray-2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-tablet) {
+  .product-card-cont-ext {
+    padding: 16px 32px 16px 0;
+    .product-info-cont {
+      .product-space-info {
+        width: 100%;
+      }
+      .location-cont {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-medium-mobile) {
+  .product-card-cont-ext {
+    @include flex($direction: column);
+    padding: 16px 0 16px 0;
+    .product-image-cont {
+      .image-href {
+        @include flex($justify_content: center);
+        width: auto;
+        height: 160px;
+        img {
+          width: 160px;
+        }
+      }
+    }
+    .product-info-cont {
+      margin-left: 0;
+    }
+  }
+}

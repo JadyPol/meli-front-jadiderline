@@ -1,0 +1,32 @@
+@import '../../../styles/base/breakpoints';
+
+.app-result-cont {
+  height: auto;
+  max-width: 1124px;
+  margin: auto;
+  padding-bottom: 32px;
+  .breadcrumbs-results-cont {
+    margin: 16px 0;
+  }
+  .product-list-cont-reuslts {
+    width: calc(100% - 32px);
+    height: auto;
+    background-color: var(--white);
+    padding: 0 16px;
+    &.no-results {
+      background-color: var(--transparent);
+    }
+    .no-result-label-cont {
+      text-align: center;
+      padding: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: $break-tablet) {
+  .app-result-cont {
+    max-width: 100%;
+    padding: 0 30px;
+    padding-bottom: 32px;
+  }
+}
